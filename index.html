@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Controller Pairing Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-gamepad"></i>
+                Controller Pairing Guide
+            </h1>
+            <p class="subtitle">Complete guides for powering on and pairing your favorite game controllers</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Master Your Controllers</h2>
+                <p>Step-by-step instructions for powering on and pairing Xbox Series X and 8BitDo SN30 Pro controllers</p>
+            </section>
+
+            <section class="controllers-grid">
+                <div class="controller-card" id="xbox-series-x">
+                    <div class="controller-image">
+                        <i class="fas fa-gamepad xbox-icon"></i>
+                    </div>
+                    <h3>Xbox Series X Controller</h3>
+                    <p>Microsoft's latest wireless controller with advanced features</p>
+                    <button class="btn btn-primary" onclick="showGuide('xbox-series-x')">
+                        View Guide
+                    </button>
+                </div>
+
+                <div class="controller-card" id="8bitdo-sn30pro">
+                    <div class="controller-image">
+                        <i class="fas fa-gamepad retro-icon"></i>
+                    </div>
+                    <h3>8BitDo SN30 Pro</h3>
+                    <p>Versatile retro-style controller with modern connectivity</p>
+                    <button class="btn btn-primary" onclick="showGuide('8bitdo-sn30pro')">
+                        View Guide
+                    </button>
+                </div>
+            </section>
+
+            <!-- Xbox Series X Guide Modal -->
+            <div id="xbox-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-gamepad xbox-icon"></i> Xbox Series X Controller Guide</h2>
+                        <span class="close" onclick="closeModal('xbox-modal')">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="guide-section">
+                            <h3><i class="fas fa-power-off"></i> Powering On</h3>
+                            <ol>
+                                <li>Press and hold the <strong>Xbox button</strong> (the large circular button with the Xbox logo) for 2-3 seconds</li>
+                                <li>The Xbox button will start flashing, indicating the controller is turning on</li>
+                                <li>Once the button stops flashing and stays lit, the controller is powered on</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-link"></i> Pairing to Xbox Series X/S</h3>
+                            <ol>
+                                <li>Turn on your Xbox Series X or Series S console</li>
+                                <li>Press and hold the <strong>Pair button</strong> on your Xbox console (located on the front panel)</li>
+                                <li>While the console is searching, press and hold the <strong>Pair button</strong> on your controller (located on the top edge, next to the USB-C port)</li>
+                                <li>Hold both buttons until the Xbox button on the controller starts flashing rapidly</li>
+                                <li>When the Xbox button stops flashing and stays lit, the controller is paired</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-desktop"></i> Pairing to Windows PC</h3>
+                            <ol>
+                                <li>Make sure your PC has Bluetooth capability</li>
+                                <li>Open Windows Settings → Devices → Bluetooth & other devices</li>
+                                <li>Click "Add Bluetooth or other device" → "Bluetooth"</li>
+                                <li>Press and hold the <strong>Pair button</strong> on your controller until the Xbox button flashes rapidly</li>
+                                <li>Select "Xbox Wireless Controller" from the list of available devices</li>
+                                <li>Click "Done" when the pairing is complete</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fab fa-steam"></i> Pairing to Steam Deck</h3>
+                            <ol>
+                                <li>On your Steam Deck, go to <strong>Settings</strong> → <strong>Bluetooth</strong></li>
+                                <li>Make sure Bluetooth is turned <strong>ON</strong></li>
+                                <li>Press and hold the <strong>Pair button</strong> on your Xbox controller until the Xbox button flashes rapidly</li>
+                                <li>On the Steam Deck, tap <strong>"Add Device"</strong></li>
+                                <li>Select <strong>"Xbox Wireless Controller"</strong> from the list of available devices</li>
+                                <li>Tap <strong>"Pair"</strong> to complete the connection</li>
+                                <li>The Xbox button should stop flashing and stay lit when successfully paired</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> The Xbox Series X controller works natively with Steam Deck. You may need to update your Steam Deck's firmware for optimal compatibility.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-mobile-alt"></i> Pairing to Android Device</h3>
+                            <ol>
+                                <li>Open your Android device's Settings → Connected devices → Pair new device</li>
+                                <li>Press and hold the <strong>Pair button</strong> on your controller until the Xbox button flashes rapidly</li>
+                                <li>Select "Xbox Wireless Controller" from the available devices</li>
+                                <li>Tap "Pair" to complete the connection</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Troubleshooting</h3>
+                            <ul>
+                                <li><strong>Controller won't turn on:</strong> Try replacing the batteries or charging via USB-C cable</li>
+                                <li><strong>Won't pair:</strong> Make sure you're within 6-8 feet of the console/device</li>
+                                <li><strong>Connection drops:</strong> Check for interference from other wireless devices</li>
+                                <li><strong>Button not responding:</strong> Try resetting the controller by holding the Xbox button for 10 seconds</li>
+                                <li><strong>Steam Deck issues:</strong> Try restarting the Steam Deck or updating its firmware</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8BitDo SN30 Pro Guide Modal -->
+            <div id="8bitdo-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-gamepad retro-icon"></i> 8BitDo SN30 Pro Guide</h2>
+                        <span class="close" onclick="closeModal('8bitdo-modal')">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="guide-section">
+                            <h3><i class="fas fa-power-off"></i> Powering On</h3>
+                            <ol>
+                                <li>Press and hold the <strong>Start button</strong> for 2-3 seconds</li>
+                                <li>The LED indicator will light up, showing the current connection mode</li>
+                                <li>Different LED patterns indicate different connection modes:
+                                    <ul>
+                                        <li><strong>Solid green:</strong> X-Input mode (Windows)</li>
+                                        <li><strong>Solid blue:</strong> D-Input mode (Android, macOS)</li>
+                                        <li><strong>Solid yellow:</strong> Switch mode</li>
+                                        <li><strong>Solid red:</strong> macOS mode</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-link"></i> Pairing to Nintendo Switch</h3>
+                            <ol>
+                                <li>On your Switch, go to System Settings → Controllers and Sensors → Pro Controller Wired Communication</li>
+                                <li>Turn this setting <strong>OFF</strong></li>
+                                <li>Go to Change Grip/Order screen</li>
+                                <li>Press and hold <strong>Y + Start</strong> on your SN30 Pro for 3 seconds</li>
+                                <li>The LED should turn yellow, indicating Switch mode</li>
+                                <li>Your controller should appear on the Switch's pairing screen</li>
+                                <li>Select it to complete pairing</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-desktop"></i> Pairing to Windows PC</h3>
+                            <ol>
+                                <li>Press and hold <strong>X + Start</strong> for 3 seconds to enter X-Input mode</li>
+                                <li>The LED should turn green</li>
+                                <li>Open Windows Settings → Devices → Bluetooth & other devices</li>
+                                <li>Click "Add Bluetooth or other device" → "Bluetooth"</li>
+                                <li>Select "8BitDo SN30 Pro" from the available devices</li>
+                                <li>Click "Done" when pairing is complete</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fab fa-steam"></i> Pairing to Steam Deck</h3>
+                            <ol>
+                                <li>On your Steam Deck, go to <strong>Settings</strong> → <strong>Bluetooth</strong></li>
+                                <li>Make sure Bluetooth is turned <strong>ON</strong></li>
+                                <li>Press and hold <strong>X + Start</strong> for 3 seconds to enter X-Input mode (LED should turn green)</li>
+                                <li>On the Steam Deck, tap <strong>"Add Device"</strong></li>
+                                <li>Select <strong>"8BitDo SN30 Pro"</strong> from the list of available devices</li>
+                                <li>Tap <strong>"Pair"</strong> to complete the connection</li>
+                                <li>The LED should remain solid green when successfully paired</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> Use X-Input mode (green LED) for best compatibility with Steam Deck. The controller will be recognized as a standard gamepad.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-mobile-alt"></i> Pairing to Android Device</h3>
+                            <ol>
+                                <li>Press and hold <strong>A + Start</strong> for 3 seconds to enter D-Input mode</li>
+                                <li>The LED should turn blue</li>
+                                <li>Open your Android device's Settings → Connected devices → Pair new device</li>
+                                <li>Select "8BitDo SN30 Pro" from the available devices</li>
+                                <li>Tap "Pair" to complete the connection</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fab fa-apple"></i> Pairing to macOS</h3>
+                            <ol>
+                                <li>Press and hold <strong>B + Start</strong> for 3 seconds to enter macOS mode</li>
+                                <li>The LED should turn red</li>
+                                <li>Open System Preferences → Bluetooth</li>
+                                <li>Click the "+" button to add a new device</li>
+                                <li>Select "8BitDo SN30 Pro" from the list</li>
+                                <li>Click "Pair" to complete the connection</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Troubleshooting</h3>
+                            <ul>
+                                <li><strong>Controller won't turn on:</strong> Check if the battery is charged or replace batteries</li>
+                                <li><strong>Wrong mode:</strong> Use the correct button combination for your device type</li>
+                                <li><strong>Won't pair:</strong> Make sure the device's Bluetooth is enabled and in pairing mode</li>
+                                <li><strong>Connection issues:</strong> Try resetting the controller by holding Start for 10 seconds</li>
+                                <li><strong>Switch pairing issues:</strong> Ensure Pro Controller Wired Communication is OFF</li>
+                                <li><strong>Steam Deck issues:</strong> Make sure you're in X-Input mode (green LED) for best compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Controller Pairing Guide. All rights reserved.</p>
+            <p>This guide is for educational purposes only. Controller compatibility may vary.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
