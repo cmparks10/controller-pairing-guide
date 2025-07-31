@@ -23,7 +23,7 @@
         <div class="container">
             <section class="hero">
                 <h2>Master Your Controllers</h2>
-                <p>Step-by-step instructions for powering on and pairing Xbox Series X and 8BitDo SN30 Pro controllers</p>
+                <p>Step-by-step instructions for powering on and pairing Xbox Series X, 8BitDo SN30 Pro, and Sony DualSense controllers</p>
             </section>
 
             <section class="controllers-grid">
@@ -45,6 +45,17 @@
                     <h3>8BitDo SN30 Pro</h3>
                     <p>Versatile retro-style controller with modern connectivity</p>
                     <button class="btn btn-primary" onclick="showGuide('8bitdo-sn30pro')">
+                        View Guide
+                    </button>
+                </div>
+
+                <div class="controller-card" id="dualsense">
+                    <div class="controller-image">
+                        <i class="fas fa-gamepad playstation-icon"></i>
+                    </div>
+                    <h3>Sony DualSense</h3>
+                    <p>PlayStation 5's innovative controller with haptic feedback</p>
+                    <button class="btn btn-primary" onclick="showGuide('dualsense')">
                         View Guide
                     </button>
                 </div>
@@ -227,6 +238,115 @@
                                 <li><strong>Connection issues:</strong> Try resetting the controller by holding Start for 10 seconds</li>
                                 <li><strong>Switch pairing issues:</strong> Ensure Pro Controller Wired Communication is OFF</li>
                                 <li><strong>Steam Deck issues:</strong> Make sure you're in X-Input mode (green LED) for best compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sony DualSense Guide Modal -->
+            <div id="dualsense-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><i class="fas fa-gamepad playstation-icon"></i> Sony DualSense Guide</h2>
+                        <span class="close" onclick="closeModal('dualsense-modal')">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="guide-section">
+                            <h3><i class="fas fa-power-off"></i> Powering On</h3>
+                            <ol>
+                                <li>Press and hold the <strong>PS button</strong> (the large circular button with the PlayStation logo) for 2-3 seconds</li>
+                                <li>The light bar around the touchpad will illuminate, indicating the controller is turning on</li>
+                                <li>Once the light bar stops flashing and stays lit, the controller is powered on</li>
+                                <li>The light bar color indicates the player number (blue for player 1, red for player 2, etc.)</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-link"></i> Pairing to PlayStation 5</h3>
+                            <ol>
+                                <li>Turn on your PlayStation 5 console</li>
+                                <li>Connect the DualSense controller to the PS5 using the included USB-C cable</li>
+                                <li>Press the <strong>PS button</strong> on the controller</li>
+                                <li>The controller will automatically pair with the console</li>
+                                <li>Once paired, you can disconnect the USB cable and use the controller wirelessly</li>
+                                <li>For additional controllers, repeat the process with each controller</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-desktop"></i> Pairing to Windows PC</h3>
+                            <ol>
+                                <li>Make sure your PC has Bluetooth capability</li>
+                                <li>Open Windows Settings → Devices → Bluetooth & other devices</li>
+                                <li>Click "Add Bluetooth or other device" → "Bluetooth"</li>
+                                <li>Press and hold the <strong>PS button</strong> and <strong>Create button</strong> (small button above the left analog stick) simultaneously for 3 seconds</li>
+                                <li>The light bar will start flashing rapidly, indicating pairing mode</li>
+                                <li>Select "Wireless Controller" from the list of available devices</li>
+                                <li>Click "Done" when the pairing is complete</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> For best compatibility on Windows, you may need to install DS4Windows or Steam for proper button mapping and functionality.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fab fa-steam"></i> Pairing to Steam Deck</h3>
+                            <ol>
+                                <li>On your Steam Deck, go to <strong>Settings</strong> → <strong>Bluetooth</strong></li>
+                                <li>Make sure Bluetooth is turned <strong>ON</strong></li>
+                                <li>Press and hold the <strong>PS button</strong> and <strong>Create button</strong> simultaneously for 3 seconds</li>
+                                <li>The light bar will start flashing rapidly</li>
+                                <li>On the Steam Deck, tap <strong>"Add Device"</strong></li>
+                                <li>Select <strong>"Wireless Controller"</strong> from the list of available devices</li>
+                                <li>Tap <strong>"Pair"</strong> to complete the connection</li>
+                                <li>The light bar should stop flashing and stay lit when successfully paired</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> The DualSense works well with Steam Deck, though some advanced features like haptic feedback may not be fully supported. Steam will automatically configure the controller mapping.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-mobile-alt"></i> Pairing to Android Device</h3>
+                            <ol>
+                                <li>Open your Android device's Settings → Connected devices → Pair new device</li>
+                                <li>Press and hold the <strong>PS button</strong> and <strong>Create button</strong> simultaneously for 3 seconds</li>
+                                <li>The light bar will start flashing rapidly</li>
+                                <li>Select "Wireless Controller" from the available devices</li>
+                                <li>Tap "Pair" to complete the connection</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> Android support may vary by device and Android version. Some games may require additional controller mapping apps.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fab fa-apple"></i> Pairing to macOS</h3>
+                            <ol>
+                                <li>Open System Preferences → Bluetooth</li>
+                                <li>Make sure Bluetooth is turned <strong>ON</strong></li>
+                                <li>Press and hold the <strong>PS button</strong> and <strong>Create button</strong> simultaneously for 3 seconds</li>
+                                <li>The light bar will start flashing rapidly</li>
+                                <li>Click the "+" button to add a new device</li>
+                                <li>Select "Wireless Controller" from the list</li>
+                                <li>Click "Pair" to complete the connection</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note:</strong> macOS support is limited. The controller may work with some games, but advanced features like haptic feedback and adaptive triggers are not supported.
+                            </div>
+                        </div>
+
+                        <div class="guide-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Troubleshooting</h3>
+                            <ul>
+                                <li><strong>Controller won't turn on:</strong> Try charging via USB-C cable for at least 30 minutes</li>
+                                <li><strong>Won't pair:</strong> Make sure you're within 6-8 feet of the console/device and using the correct button combination</li>
+                                <li><strong>Connection drops:</strong> Check for interference from other wireless devices or try moving closer to the console</li>
+                                <li><strong>Button not responding:</strong> Try resetting the controller by inserting a paperclip into the reset hole on the back</li>
+                                <li><strong>PC compatibility issues:</strong> Install DS4Windows or use Steam for better compatibility</li>
+                                <li><strong>Steam Deck issues:</strong> Try restarting the Steam Deck or updating its firmware</li>
+                                <li><strong>Light bar not working:</strong> Check if the controller is properly charged and try resetting it</li>
                             </ul>
                         </div>
                     </div>

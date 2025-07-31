@@ -6,6 +6,8 @@ function showGuide(controllerType) {
         modalId = 'xbox-modal';
     } else if (controllerType === '8bitdo-sn30pro') {
         modalId = '8bitdo-modal';
+    } else if (controllerType === 'dualsense') {
+        modalId = 'dualsense-modal';
     }
     
     if (modalId) {
